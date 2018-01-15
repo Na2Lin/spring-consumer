@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: 127.0.0.1:3881,127.0.0.1:3882,127.0.0.1:3883
+    bootstrap-servers: 120.79.77.11:9092,120.79.77.11:9093,120.79.77.11:9094
     consumer:
       client-id: 1
       group-id: 1

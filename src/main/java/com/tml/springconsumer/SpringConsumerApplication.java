@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.KafkaMessageListenerContainer;
 import org.springframework.kafka.listener.config.ContainerProperties;
@@ -16,6 +17,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.tml.springconsumer.dao")
+@EnableKafka
 public class SpringConsumerApplication {
 
 	@Autowired

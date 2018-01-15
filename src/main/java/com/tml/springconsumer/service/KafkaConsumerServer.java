@@ -1,14 +1,13 @@
 package com.tml.springconsumer.service;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.kafka.listener.MessageListener;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KafkaConsumerServer implements MessageListener<String,String>{
+public class KafkaConsumerServer{
 
-
-    @Override
+    @KafkaListener(topics = "topic_1",group = "group_2")
     public void onMessage(ConsumerRecord<String, String> record) {
         System.out.println("KafkaConsumerServer=============kafkaConsumer开始消费=============");
         String topic = record.topic();
